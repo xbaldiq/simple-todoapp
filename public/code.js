@@ -44,8 +44,10 @@ const renderTodo = () => {
         todos.forEach((todo, index) => {
             const newTodo = document.createElement('li')
             newTodo.innerText = todo.text
+            newTodo.classList.add("list-group-item")
 
             const deleteButton = document.createElement('button')
+            deleteButton.classList.add("text-right")
             deleteButton.innerText = 'delete'
             deleteButton.addEventListener('click', () => deleteTodo(index))
             newTodo.append(' ............ ', deleteButton)
